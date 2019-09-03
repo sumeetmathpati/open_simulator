@@ -1,0 +1,26 @@
+{
+  "name": "OpenSimulator",
+  "description": "A digital logic simulator",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "electron .",
+    "package": "",
+    "build-linux": "electron-packager . OpenSimulator --overwrite --asar --icon=build/icon.icns --platform linux --arch x64 --out dist/",
+    "build-windows": "electron-packager . OpenSimulator --overwrite --asar --icon=build/icon.icns --platform=win32 --arch=ia32 --out dist/",
+    "build-mac": "electron-packager . OpenSimulator --overwrite --asar --icon=build/icon.icns --platform=darwin --arch=x64 --out dist/",
+    "build-installer": "electron-installer-debian --src dist/OpenSimulator-linux-x64/ --dest dist/installers/ --arch amd64 --icon=build/icon.icns"
+  },
+  "author": {
+    "name": "Sumeet Mathpai",
+    "email": "sumeet.mathpati@gmail.com"
+  },
+  "main": "app/main.js",
+  "dependencies": {
+    "electron-prompt": "^1.3.0",
+    "smalltalk": "^3.2.2"
+  },
+  "devDependencies": {
+    "electron": "^4.0.6",
+    "electron-packager": "^13.1.1"
+  }
+}
