@@ -8,4 +8,4 @@ First make sure you have nodeJS installed
 
 `npm install`
 
-`npmstart`
+`npm start`
